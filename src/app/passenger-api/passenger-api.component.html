@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-            <table class="table">
+            <!-- <table class="table">
                 <thead>
                     <tr>
                         <th>name</th>
@@ -16,10 +16,10 @@
                         <th>airline established</th>
 
                     </tr>
-                </thead>
+                </thead> -->
 
                 <!-- {"_id":"63354cfcc200ce28914d6d73","name":"dinaaa","trips":300,"airline":[{"id":8,"name":"Thai Airways","country":"Thailand","logo":"https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Thai_Airways_Logo.svg/200px-Thai_Airways_Logo.svg.png","slogan":"Smooth as Silk / I Fly THAI","head_quaters":"Jom Phol Subdistrict, Chatuchak, Bangkok, Thailand","website":"www.thaiairways.com","established":"1960"}],"__v":0} -->
-
+<!-- 
                 <tbody>
                     <tr *ngFor="let i of passenger.data">
                         <td>{{i.name}}</td>
@@ -28,11 +28,30 @@
                         <td>{{i.airline.country}}</td>
                         <td>{{i.airline.logo}}</td>
                         <td>{{i.airline.slogan}}</td>
-                        <td>{{i.airline.website}}</td>
+                        <td>{{i.airline.head_quaters}}</td>
                         <td>{{i.airline.website}}</td>
                         <td>{{i.airline.established}}</td>
                     </tr>
-                </tbody>
+                </tbody> -->
+
+                <div class="row">
+                    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of passenger.data">
+
+                        <div class="card" >
+                            <img src="{{i.airline.logo}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.airline.name}}</h5>
+                              <p class="card-text">{{i.airline.country}}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">{{i.airline.slogan}}</li>
+                              <li class="list-group-item">{{i.airline.head_quaters}}</li>
+                              <li class="list-group-item">{{i.airline.established}}</li>
+                            </ul>
+                            
+                          </div>
+                    </div>
+                </div>
 
             </table>
         </div>
