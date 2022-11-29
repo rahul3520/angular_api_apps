@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserDataComponent } from './user-data/user-data.component';
 import { TodoComponent } from './todo/todo.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 
 const myRoute:Routes=[
@@ -37,6 +38,10 @@ const myRoute:Routes=[
   {
     path:"todos",
     component:TodoComponent
+  },
+  {
+    path:"quotes",
+    component:QuotesComponent
   }
 ]
 
@@ -50,7 +55,8 @@ const myRoute:Routes=[
     ProductListComponent,
     NavBarComponent,
     UserDataComponent,
-    TodoComponent
+    TodoComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,
