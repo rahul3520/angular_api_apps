@@ -22,4 +22,26 @@ export class ApiIntegrationService {
   {
     return this.http.get("https://dummyjson.com/quotes")
   }
+
+  fetchTodos=() =>
+  {
+    return this.http.get("https://dummyjson.com/todos")
+  }
+
+  fetchUserdata=() =>
+  {
+    return this.http.get("https://dummyjson.com/users")
+  }
+
+  fetchUserinfo=() =>
+  {
+    return this.http.get("https://reqres.in/api/users?page=1")
+  }
+
+  fetchUSpublicData=() =>
+  {
+    return this.http.get("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
+  }
+
+  
 }
