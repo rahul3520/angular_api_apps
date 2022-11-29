@@ -24,13 +24,15 @@
                     <tr *ngFor="let i of passenger.data">
                         <td>{{i.name}}</td>
                         <td>{{i.trips}}</td>
-                        <td>{{i.airline.name}}</td>
-                        <td>{{i.airline.country}}</td>
-                        <td>{{i.airline.logo}}</td>
-                        <td>{{i.airline.slogan}}</td>
-                        <td>{{i.airline.website}}</td>
-                        <td>{{i.airline.website}}</td>
-                        <td>{{i.airline.established}}</td>
+                        <td>{{i.airline[0].name}}</td>
+
+                    
+                        <td>{{i.airline[0].country}}</td>
+                        <td>{{i.airline[0].logo}}</td>
+                        <td>{{i.airline[0].slogan}}</td>
+                        <td>{{i.airline[0].head_quaters}}</td>
+                        <td>{{i.airline[0].website}}</td>
+                        <td>{{i.airline[0].established}}</td>
                     </tr>
                 </tbody>
 
