@@ -17,4 +17,9 @@ export class ApiIntegrationService {
   {
     return this.http.get("https://dummyjson.com/products")
   }
+
+  fetchQuotes=() =>
+  {
+    return this.http.get("https://dummyjson.com/quotes")
+  }
 }
